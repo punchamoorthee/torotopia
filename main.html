@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOROTOPIA - Into the Toroverse</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-family: "montserrat", sans-serif;
+        font-size: 16px;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      ol,
+      ul {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .header {
+        padding: 10px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .header-logo {
+        min-width: 250px;
+        max-width: 250px;
+      }
+
+      .navigation {
+        text-transform: uppercase;
+        color: #85163b;
+      }
+
+      .navigation ol {
+        display: flex;
+      }
+
+      .navigation li {
+        display: inline-block;
+        padding: 0 10px;
+      }
+
+      .header-video video {
+        width: 100%;
+        display: block;
+      }
+
+      .intro-section {
+        padding: 0 25%;
+        background-position: center;
+        background-size: cover;
+        background-image: url(./Assets/background.png);
+        text-align: center;
+      }
+
+      .intro-section h1 {
+        padding-top: 100px;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 900;
+        color: #de095b;
+      }
+
+      .intro-section p {
+        padding-top: 50px;
+        text-transform: uppercase;
+      }
+
+      .intro-section p:last-of-type {
+        padding-bottom: 100px;
+      }
+
+      .intro-section highlight {
+        color: yellow;
+      }
+
+      .intro-section underline {
+        text-decoration: underline;
+      }
+
+      .activities-section {
+        background-color: black;
+        text-align: center;
+      }
+
+      .activities-section h1 {
+        color: #de095b;
+        padding-top: 100px;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 900;
+      }
+
+      .activities-grid {
+        display: grid;
+        padding: 40px 20%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        overflow: hidden;
+      }
+
+      .activity {
+        padding: 20px;
+      }
+
+      hr {
+        width: 60%;
+        color: white;
+      }
+
+      .prizes_n_giveaways-section {
+        background-color: black;
+        padding: 0 20%;
+        text-align: center;
+      }
+
+      .prizes_n_giveaways-section h1 {
+        color: yellow;
+        padding: 40px 0;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 900;
+      }
+
+      .prizes_n_giveaways {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .prize {
+        padding: 40px 10px;
+      }
+
+      .prize img {
+        max-width: 250px;
+        padding-bottom: 15px;
+      }
+
+      .prize ul {
+        max-width: 250px;
+        text-align: left;
+        list-style-type: disc;
+        list-style-position: inside;
+        padding-left: 15px;
+      }
+
+      .social_media-section {
+        padding: 0 20%;
+        background-color: black;
+        text-align: center;
+      }
+
+      .social_media-section h1 {
+        color: #de095b;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 900;
+      }
+
+      .social_media_list {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .social_media {
+        max-width: 8%;
+        display: inline-block;
+        padding-bottom: 40px;
+      }
+
+      .events-section {
+        text-align: center;
+        background-color: black;
+      }
+
+      .events-section h1 {
+        color: #de095b;
+        padding-top: 60px;
+        padding-bottom: 30px;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 900;
+      }
+
+      .events-section img {
+        max-width: 8%;
+        padding-top: 20px;
+      }
+
+      .footer-section {
+        background-color: black;
+      }
+
+      .yellow-footer-rule {
+        background-color: #e8b909;
+        height: 20px;
+      }
+
+      .footer {
+        padding: 25px 20%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .sitemap {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .first_col,
+      .second_col,
+      .third_col {
+        padding: 0 25px;
+      }
+
+      .sitemap h3 {
+        font-weight: bold;
+      }
+
+      .sitemap h3:last-of-type {
+        padding-top: 10px;
+      }
+
+      .sitemap hr {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+
+      .hor_rule {
+        background-color: black;
+      }
+
+      hr {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .address_row {
+        width: 70%;
+        padding-bottom: 5px;
+      }
+
+      .social_row {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .insta img,
+      .fb img,
+      .tiktok img {
+        max-width: 50%;
+      }
+
+      .copyright {
+        padding: 25%;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        text-align: left;
+      }
+
+      .chat {
+        position: fixed;
+        background-color: #85163b;
+        border-radius: 5px;
+        padding: 10px;
+        width: 250px;
+        bottom: 5px;
+        right: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-section">
+      <div class="header">
+        <div class="header-logo">
+          <img
+            src="./Assets/header-logo.png"
+            href="https://lsucsudh.org/home"
+          />
+        </div>
+        <div class="navigation">
+          <ol>
+            <li href="https://www.lsucsudh.org/torotopia/#">Visit</li>
+            <li href="https://www.lsucsudh.org/torotopia/#">
+              <b>Activities</b>
+            </li>
+            <li href="https://www.lsucsudh.org/torotopia/#">Employment</li>
+            <li href="https://www.lsucsudh.org/torotopia/#">
+              Reserve the Union
+            </li>
+            <li href="https://www.lsucsudh.org/torotopia/#">
+              Board of Directors
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="header-video">
+        <video autoplay src="./Assets/header.mp4" />
+      </div>
+    </div>
+    <div class="intro-section">
+      <h1>Now Entering the Toroverse!</h1>
+      <p>Now is the time to be an engaged proud Toro!</p>
+      <p>
+        Join us <highlight>March 8 & 9</highlight> as we
+        <underline>highlight & celebrate live and virtual resources</underline>
+        in the
+        <highlight>Loker Student Union (LSU)!</highlight>
+      </p>
+    </div>
+    <div class="activities-section">
+      <h1>Activities</h1>
+      <div class="activities-grid">
+        <div class="activity">
+          <img src="./Assets/Event-Flip-Icons-1.png" />
+        </div>
+        <div class="activity">
+          <img src="./Assets/Event-Flip-Icons-2.png" />
+        </div>
+        <div class="activity">
+          <img src="./Assets/Event-Flip-Icons-3.png" />
+        </div>
+        <div class="activity">
+          <img src="./Assets/Event-Flip-Icons-4.png" />
+        </div>
+        <div class="activity">
+          <img src="./Assets/Event-Flip-Icons-5.png" />
+        </div>
+        <div class="activity">
+          <img src="./Assets/Event-Flip-Icons-6.png" />
+        </div>
+      </div>
+    </div>
+    <div class="hor_rule"><hr /></div>
+    <div class="prizes_n_giveaways-section">
+      <h1>Ways to win big prizes & giveaways!!</h1>
+      <div class="prizes_n_giveaways">
+        <div class="prize">
+          <img src="./Assets/wheres_tj_logo_small.png" />
+          <ul>
+            <li>(2) MacBook Air Laptops</li>
+            <li>(2) Surface Laptops</li>
+            <li>(4) Spa Gift Certificates</li>
+            <li>(2) Movie Packages for Two</li>
+            <li>$50 Bookstore Giftcards</li>
+          </ul>
+        </div>
+        <div class="prize">
+          <img src="./Assets/tag_toro_logo_small.png" />
+          <ul>
+            <li>(10) DH Merch Package with $25 Bookstore Giftcards</li>
+            <li>
+              (4) Tech Prize Packs (Tablet, Tripod, Ring Light, Power Bank)
+            </li>
+          </ul>
+        </div>
+        <div class="prize">
+          <img src="./Assets/resourcefairlogo.png" />
+          <ul>
+            <li>(1) Big Screen TV</li>
+            <li>(4) Noise-cancelling Headphones</li>
+            <li>(10) Hydroflasks</li>
+            <li>(2) Bluetooth Speakers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="hor_rule"><hr /></div>
+    <div class="social_media-section">
+      <h1>Follow us on social media</h1>
+      <div class="social_media_list">
+        <div class="social_media">
+          <h2>Instagram</h2>
+          <img
+            src="./Assets/instagramlogo.png"
+            href="https://www.instagram.com/lokerstudentunion/"
+          />
+        </div>
+        <div class="social_media">
+          <h2>Twitter</h2>
+          <img
+            src="./Assets/twitterlogo.png"
+            href="https://twitter.com/csudh_lsu"
+          />
+        </div>
+        <div class="social_media">
+          <h2>Tiktok</h2>
+          <img
+            src="./Assets/tiktoklogo.png"
+            href="https://www.tiktok.com/@lokerstudentunion"
+          />
+        </div>
+        <div class="social_media">
+          <h2>Facebook</h2>
+          <img
+            src="./Assets/facebooklogo.png"
+            href="https://www.facebook.com/lokerstudentunion/"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="hor_rule"><hr /></div>
+    <div class="events-section">
+      <h1>Are you looking for additional LSU Events?</h1>
+      <img
+        src="./Assets/Toro-link-button-02.png"
+        href="https://torolink.csudh.edu/"
+      />
+    </div>
+    <div class="footer-section">
+      <div class="footer_image">
+        <img src="./Assets/footerimage.png" />
+      </div>
+      <div class="yellow-footer-rule"></div>
+      <div class="footer">
+        <div class="sitemap">
+          <div class="first_col">
+            <h3>About Us</h3>
+            <hr />
+            <ul>
+              <li href="https://lsucsudh.org/about-the-lsu/">About the LSU</li>
+              <li>Sustainability Efforts</li>
+              <li href="https://www.lsucsudh.org/legacy-list/">Legacy List</li>
+              <li href="https://www.lsucsudh.org/brand-identity/">
+                Brand Identity
+              </li>
+              <li href="https://www.lsucsudh.org/organizational-history/">
+                Organizational History
+              </li>
+            </ul>
+            <h3>Annual Reporting</h3>
+            <hr />
+            <ul>
+              <li href="https://www.lsucsudh.org/annual-reports/">
+                Annual Reports
+              </li>
+              <li>Compliance Audit Report</li>
+            </ul>
+          </div>
+          <div class="second_col">
+            <h3>Corporate Documents</h3>
+            <hr />
+            <ul>
+              <li
+                href="https://lsucsudh.org/wp-content/uploads/2018/07/Articles-of-Incorporation.pdf"
+              >
+                Articles of Incorporation
+              </li>
+              <li
+                href="https://lsucsudh.org/wp-content/uploads/2018/07/Bylaws.pdf"
+              >
+                Bylaws
+              </li>
+              <li>Financial Statements</li>
+              <li>Richard McKee Transparency Act</li>
+              <li href="https://lsucsudh.org/policies/">Policies</li>
+            </ul>
+          </div>
+          <div class="third_col">
+            <h3>Connect With Us</h3>
+            <hr />
+            <ul>
+              <li>Information Desk</li>
+              <li>Reservations & Event Services</li>
+              <li>LSU Administration Office</li>
+              <li href="https://www.lsucsudh.org/professional-staff/">
+                Professional Team
+              </li>
+              <li href="https://lsucsudh.org/faqs/">FAQs</li>
+              <li>Facility Request</li>
+              <li href="https://www.lsucsudh.org/employee-information/">
+                Employee Information
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="address">
+          <div class="address_row">
+            1000 E. Victoria Street, Carson, CA, 90747
+          </div>
+          <div class="phone_row">
+            <div class="phone_icon"></div>
+            <div class="phone_number">310.243.3854</div>
+          </div>
+          <div class="social_row">
+            <div class="insta">
+              <img
+                src="./Assets/footer_insta.webp"
+                href="https://www.instagram.com/lokerstudentunion/"
+              />
+            </div>
+            <div class="tiktok">
+              <img
+                src="./Assets/footer_tiktok.webp"
+                href="https://www.tiktok.com/@lokerstudentunion"
+              />
+            </div>
+            <div class="fb">
+              <img
+                src="./Assets/footer_fb.webp"
+                href="https://www.facebook.com/lokerstudentunion/"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright">
+        <p>© 2022 Loker Student Union. All Rights Reserved.</p>
+      </div>
+    </div>
+    <div class="chat">
+      <p>Send message</p>
+    </div>
+  </body>
+</html>
